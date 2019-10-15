@@ -24,7 +24,7 @@ Ghost
 Ghoulish
 Goblin
 Gory
-Grim Reaper
+GrimReaper
 Gruesome
 Haunted
 Horrifying
@@ -66,7 +66,7 @@ Zombie`.toLowerCase()
 
 let difficulty
 let randomWord
-
+let wrongLetters = []
 let easyList = []
 let mediumList = []
 let hardList = []
@@ -76,6 +76,8 @@ wordList = wordList.split("\n")
 let inputField = document.querySelector(".inputField")
 let instructions = document.querySelector(".instructions")
 let underscores = document.querySelector(".underscores")
+let hangman = document.querySelector(".hangman")
+let lives = 6
 
 
 
@@ -90,9 +92,6 @@ for (word of wordList){
   }
 }
 
-// for(index of word){
-//   indexesOfMyWord.push("_")
-// }
 
 function wordChooser(easyList, mediumList, hardList){
   difficulty = prompt("Easy, Medium, or Hard").toLowerCase()
@@ -135,16 +134,50 @@ function replacingLetter(){
 }
 
 function instructionsDisplay(){
-  if (randomWord.includes(inputField.value)){
+
+  if (usedLetters.includes(inputField.value)){
+    instructions.innerHTML ="You already guessed \"" + inputField.value + "\"!";
+  } else if (randomWord.includes(inputField.value)){
     usedLetters.push(inputField.value)
     instructions.innerHTML = "You got one!";
-    instructions.innerHTML = "You've used these letters: " + usedLetters;
-  } else if (usedLetters.includes(inputField.value)){
-     instructions.innerHTML ="You already guessed \"" + inputField.value + "\"!";
-  } else {
-    instructions.innerHTML = "Guess another letter!";
-  }   
+    instructions.innerHTML = `Youve used these letters: ${usedLetters} ${wrongLetters}`;
+  } else if (randomWord.includes != inputField.value ){
+    wrongLetters.push(inputField.value)
+    instructions.innerHTML = "Oops! This letter is not in the word <br> Guess another letter!"
+    lives--
+
+    winLose()
+  }
 }
+   
+function winLose(){
+  
+    if(usedLetters === randomWord){
+      instructions.innerHTML = "You win! Congratulations!!"
+    }else if(lives <= 0){
+      instructions.innerHTML = `Sorry, you lose! The word was ${randomWord}`
+
+      inputField.style.display = "none"
+    }  
+    
+    hangman.innerHTML = `Lives: ${lives}`
+}
+  
+
+
+// for (var i = 0; i < wrongLetters.length; i++) {
+      // if (randomWord === usedLetters) {
+      //   instructions.innerHTML = "You Win!";
+      // }
+    
+//  function blahBlah() {
+//     hangman.innerHTML = "You have " + lives + " lives";
+//     if (lives < 1) {
+//       instructions.innerHTML = "Game Over";
+//     }
+//   }
+  //  
+
 
 wordChooser(easyList, mediumList, hardList)
 
