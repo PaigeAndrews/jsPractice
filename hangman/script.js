@@ -135,25 +135,27 @@ function replacingLetter(){
 
 function instructionsDisplay(){
 
+  winLose()
+
   if (usedLetters.includes(inputField.value)){
     instructions.innerHTML ="You already guessed \"" + inputField.value + "\"!";
   } else if (randomWord.includes(inputField.value)){
     usedLetters.push(inputField.value)
-    instructions.innerHTML = "You got one!";
-    instructions.innerHTML = `Youve used these letters: ${usedLetters} ${wrongLetters}`;
+    instructions.innerHTML = `You got one! <br> Youve used these letters: ${usedLetters} ${wrongLetters}`;
   } else if (randomWord.includes != inputField.value ){
     wrongLetters.push(inputField.value)
-    instructions.innerHTML = "Oops! This letter is not in the word <br> Guess another letter!"
+    instructions.innerHTML = `Oops! This letter is not in the word <br> Guess another letter! <br> Youve used these letters: ${usedLetters} ${wrongLetters}`
     lives--
 
-    winLose()
+    
   }
 }
    
 function winLose(){
   
-    if(usedLetters === randomWord){
-      instructions.innerHTML = "You win! Congratulations!!"
+    if(indexesOfMyWord.includes("_") != true){
+       inputField.style.display = "none"
+       instructions.innerHTML = "You win! Congratulations!!"
     }else if(lives <= 0){
       instructions.innerHTML = `Sorry, you lose! The word was ${randomWord}`
 
@@ -192,3 +194,11 @@ inputField.addEventListener("keydown",function(event){
 })
 
 console.log("underscores", indexesOfMyWord, "random word", randomWord)
+
+
+
+
+
+
+
+

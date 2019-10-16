@@ -4,7 +4,7 @@ body{
     font-family: 'Underdog', cursive;
     overflow: scroll;
     overflow-x: hidden;
-    
+    margin: 0;
 }
 /* html{
   height: 100%;
@@ -111,3 +111,9 @@ div{
     width: 100%;
   }
 }
+
+
+
+
+
+
