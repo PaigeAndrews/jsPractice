@@ -2,6 +2,7 @@ var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
 var list = document.getElementsByTagName("li");
+var deleteLi = document.getElementsByClassName("deleteLi");
 
 function inputLength() {
 	return input.value.length;
@@ -26,15 +27,24 @@ function addListAfterKeypress(event) {
 	}
 }
 
-function toggleList(event) {
-document.querySelector("il").classList.toggle("done");
-	
-}
+
 for(var i=0; i<list.length; i++){
  list[i].addEventListener("click", liClick);
 }
 function liClick(){
   this.classList.toggle("done");
+}
+
+
+
+for(var i=0; i<list.length; i++){
+ deleteLi[i].addEventListener("click", deleteClick);
+ deleteClick()
+}
+function deleteClick(){
+	//  list.removeChild(list[i]);
+	// this.childNode.remove();
+	list.innerHTML = "";
 }
 
 
