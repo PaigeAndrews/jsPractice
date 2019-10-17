@@ -146,7 +146,6 @@ function instructionsDisplay(){
     wrongLetters.push(inputField.value)
     instructions.innerHTML = `Oops! This letter is not in the word <br> Guess another letter! <br> Youve used these letters: ${usedLetters} ${wrongLetters}`
     lives--
-
     
   }
 }
@@ -186,6 +185,7 @@ wordChooser(easyList, mediumList, hardList)
 
 inputField.addEventListener("keydown",function(event){
   if(event.which == "13"){
+  
     replacingLetter()
 
     inputField.value = ""
