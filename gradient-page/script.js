@@ -10,7 +10,7 @@ function setGradient() {
 	+ ", " 
 	+ color2.value 
 	+ ")";
-
+	// css.innerHTML =  body.style.background + ";";
 	css.textContent = body.style.background + ";";
 }
 

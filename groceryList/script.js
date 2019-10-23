@@ -27,27 +27,60 @@ function addListAfterKeypress(event) {
 	}
 }
 
+// function deleteClick(){
+//     this.parentNode.removeChild(list[i]);
+// }
 
 for(var i=0; i<list.length; i++){
- list[i].addEventListener("click", liClick);
+	list[i].addEventListener("click", liClick);
 }
+
+
 function liClick(){
   this.classList.toggle("done");
 }
 
 
+// function deleteClick(){
+// 	//   list.parentNode.removeChild(list);
+// 	this.classList.parentNode.removeChild(list);
+// }
 
-for(var i=0; i<list.length; i++){
- deleteLi[i].addEventListener("click", deleteClick);
- deleteClick()
-}
-function deleteClick(){
-	//  list.removeChild(list[i]);
-	// this.childNode.remove();
-	list.innerHTML = "";
-}
 
+// for(var i=0; i<list.length; i++){
+// 	deleteLi[i].addEventListener("click", deleteClick);
+// }
+
+Array.prototype.slice.call(deleteLi).forEach(function(deleteClick) {
+  // iterate and add the event handler to it
+  deleteClick.addEventListener("click", function(e) {
+    e.target.parentNode.remove()
+  });
+
+})
+// add event listener to first 6 btns in HTML file
+// for(var i = 0; i < deleteLi.length; i++){
+// 	deleteLi[i].addEventListener("click", removeChild, false);
+// }
+
+
+// from StackOverflow:
+// function removeChild(evt) {
+//   evt.target.removeEventListener("click", removeChild, false);
+//   evt.target.childNode.remove();
+// }
+//  $(document).ready(function(){
+// $("deleteLi").click(function(){
+// $(this).hide("list");
+// });
+// });
+
+    
+
+// deleteLi.addEventListener("click", deleteClick);
 
 button.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
+
+deleteClick()
