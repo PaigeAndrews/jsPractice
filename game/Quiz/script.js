@@ -147,9 +147,11 @@ function firstQ(){
   if (buttons.addEventListener("click",value1)){
         
   }
-
-  submitButton.addEventListener("click", secondQ)
+ 
+  submitButton.addEventListener("click", secondQ);
 };
+
+
 
 function value1(){
   for (letter in question1.answers) {
@@ -157,7 +159,7 @@ function value1(){
 }};
 
 function secondQ(){
-quizQuestions.innerHTML = ""
+  
 quizQuestions.innerHTML = question2.question
 for (var i = 0; i < question2.answers.length; i++) {
     buttons.innerHTML += "<button>" + question2.answers[i] + "</button>";
@@ -176,7 +178,7 @@ function thirdQ(){
 
 function results(){
   buttons.innerHTML = ""
-  submitButton.innerHTML = ""
+  submitButton.style.display= 'none';
   quizQuestions.innerHTML = " youre score is: "
   resultsContainer.innerHTML = " score "
 };

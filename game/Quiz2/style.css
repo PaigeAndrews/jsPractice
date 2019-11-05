@@ -1,0 +1,93 @@
+html{
+	 background-image: url("https://3.bp.blogspot.com/-rC-q-YrTqRI/XEWyj4N4yXI/AAAAAAAAHiU/3pTZSCt1wvsEsBLVOqfWfHVjLfb55fe2wCHMYCw/s1600/11-armored-titan-hd-wallpapers-background-images-wallpaper-abyss.jpg");
+	 background-attachment: fixed;
+	 repeat: none;
+	 background-size: cover;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+     font-family: 'Kodchasan', sans-serif;
+	color: white;
+}
+
+
+
+#quiz {
+	margin-left: 20%;
+	background-color: rgba(0,0,0, 0.7);
+	padding: 10px 20px 10px 20px;
+	width: 400px;
+	border-radius: 20px;
+	float: left;
+	/* overflow-y: scroll; */
+}
+
+h1{
+  margin-left:23%;
+   text-shadow: 2px 2px  #ff5459;
+}
+
+input {
+	margin-bottom: 20px;
+	display: block;
+}
+
+#textbox {
+	height: 25px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	padding-left: 5px;
+}
+
+
+#button {
+	background: green;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+	transition-duration: .5s;
+	margin-top: 15px;
+}
+
+
+
+#button:hover {
+	background: white;
+	border: 1px solid green;
+	color: black;
+	cursor: pointer;
+
+}
+
+#after_submit {
+	visibility: hidden;
+	background-color: rgba(0,0,0, 0.7);
+	padding: 10px 20px 10px 20px;
+	width: 400px;
+	border-radius: 20px;
+	float: left;
+	margin-left: 20px;
+	font-size: 30px;
+
+
+}
+
+#picture {
+	width: 375px;
+    height: auto;
+	/* height: 245px; */
+}
+
+
+
+#mc {
+	display: inline;
+} 
+
+.questions{
+font-weight: bold;
+}

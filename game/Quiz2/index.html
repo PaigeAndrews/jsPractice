@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>AoT Quiz</title>
+<link href ="style.css" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kodchasan&display=swap" rel="stylesheet">
+<script src = "script.js"></script>
+
+</head>
+
+
+<body>
+<h1>Attack on Titan Quiz</h1>
+
+
+<form id = "quiz" name = "quiz">
+
+
+<p class = "questions">What is the name of the outter most wall?</p>
+<input id = "textbox" type = "text" name = "question1">
+
+<p class = "questions">Who is the best fighter?</p>
+<input type = "radio" id = "mc" name = "question2" value = "Mikasa"> Mikasa<br>
+<input type = "radio" id = "mc" name = "question2" value = "Conny"> Conny<br>
+<input type = "radio" id = "mc" name = "question2" value = "Levi"> Levi<br>
+
+<p class = "questions">Who used to live out in the woods outside the walls?</p>
+<input type = "radio" id = "mc" name = "question3" value = "Kenny"> Kenny<br>
+<input type = "radio" id = "mc" name = "question3" value = "Christa"> Christa<br>
+<input type = "radio" id = "mc" name = "question3" value = "Sasha"> Sasha<br>
+
+<p class = "questions">Who had the biggest titan form?</p>
+<input type = "radio" id = "mc" name = "question4" value = "Bertholt"> Bertholt<br>
+<input type = "radio" id = "mc" name = "question4" value = "Reiner"> Reiner<br>
+<input type = "radio" id = "mc" name = "question4" value = "Rod Reiss"> Rod Reiss<br>
+
+<p class = "questions">Why did Keith Shadis resign from being a commander?</p>
+<input type = "radio" id = "mc" name = "question5" value = "a">He was afraid of dying<br>
+<input type = "radio" id = "mc" name = "question5" value = "b"> He missed his family<br>
+<input type = "radio" id = "mc" name = "question5" value = "c"> He didn't see himself as someone special<br>
+
+<p class = "questions">Which character has a crush on Annie Leonhart?</p>
+<input type = "radio" id = "mc" name = "question6" value = "a">Bertholt<br>
+<input type = "radio" id = "mc" name = "question6" value = "b"> Jean<br>
+<input type = "radio" id = "mc" name = "question6" value = "c"> Marco<br>
+
+<p class = "questions">Who did Ymir eat to obtain her intellegent titan power?</p>
+<input type = "radio" id = "mc" name = "question7" value = "a">Mike<br>
+<input type = "radio" id = "mc" name = "question7" value = "b"> Marcel<br>
+<input type = "radio" id = "mc" name = "question7" value = "c"> Marco<br>
+
+<p class = "questions">What is a Pure Titan</p>
+<input type = "radio" id = "mc" name = "question8" value = "a">Titan form of the original 7 Titans<br>
+<input type = "radio" id = "mc" name = "question8" value = "b"> Mindless Titan form <br>
+<input type = "radio" id = "mc" name = "question8" value = "c"> Titan that lives inside the walls<br>
+
+
+<input id = "button" type = "button" value = "I'm Finished!" onclick = "check()">
+
+
+</form>
+
+<div id ="after_submit">
+<p id ="number_correct"></p>
+<p id ="message"></p>
+<img id ="picture">
+</div>
+</html>
+
+</body>
