@@ -14,18 +14,17 @@ body {
 
 
 #quiz {
-	margin-left: 20%;
+	margin-left: 30%;
 	background-color: rgba(0,0,0, 0.7);
 	padding: 10px 20px 10px 20px;
 	width: 400px;
 	border-radius: 20px;
 	float: left;
-	/* overflow-y: scroll; */
 }
 
 h1{
-  margin-left:23%;
-   text-shadow: 2px 2px  #ff5459;
+  margin-left:33%;
+  text-shadow: 2px 2px  #ff5459;
 }
 
 input {
@@ -72,20 +71,20 @@ input {
 	float: left;
 	margin-left: 20px;
 	font-size: 30px;
-
-
+	display: inline;
+	margin-left: 30%;
+	margin-top: 10px;
 }
 
 #picture {
 	width: 375px;
-    height: auto;
-	/* height: 245px; */
+	height: auto;
 }
 
 
 
 #mc {
-	display: inline;
+display: inline;
 } 
 
 .questions{
