@@ -100,9 +100,62 @@ function squared(b) {
 	return b**2
 }
 // or
+
 squared = (b) =>{ return b**2}
 
+// Create a function that returns the index of the first vowel in a string.
 
+function firstVowel(str) {
+	return str.search(/a|e|i|o|u/i);
+}
+
+// Christmas Eve is almost upon us, so naturally we need to prepare some milk and
+//  cookies for Santa! Create a function that accepts a Date object and returns true
+//   if it's Christmas Eve (December 24th) and false otherwise. Keep in mind JavaScript's Date
+//    month is 0 based, meaning December is the 11th month while January is 0.
+
+function timeForMilkAndCookies(date) {
+  var day = date.getDate();
+  var month = date.getMonth();
+  
+  if(day == 24 && month == 11) {
+    return true
+  } else {
+    return false
+  }
+}
+
+// Create a function that takes a number as an argument. Add up all the numbers from 1
+//  to the number you passed to the function. For example, if the input is 4 then your function 
+//  should return 10 because 1 + 2 + 3 + 4 = 10.
+
+function addUp(number){
+  var sum = 0;
+  for(var i = 1; i <= number; i++){
+    sum += i;
+  }
+  return sum;
+}
+
+addUp(600);
+
+
+// Create a function that returns true if two arrays contain identical values, and false otherwise.
+
+var checkEquals = function (arr1, arr2) {
+
+	// Check if the arrays are the same length
+	if (arr1.length !== arr2.length) return false;
+
+	// Check if all items exist and are in the same order
+	for (var i = 0; i < arr1.length; i++) {
+		if (arr1[i] !== arr2[i]) return false;
+	}
+
+	// Otherwise, return true
+	return true;
+
+};
 
 
 
