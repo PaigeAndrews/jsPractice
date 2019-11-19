@@ -157,6 +157,34 @@ var checkEquals = function (arr1, arr2) {
 
 };
 
+// Create a function that takes an array of items, removes all 
+// duplicate items and returns a new array in the same sequential order as
+//  the old array (minus duplicates)
+
+function removeDups(arr) {
+  return [...new Set(arr)];
+}
+
+// Write a function redundant that takes in a string str and returns a function that returns str.
+
+function redundant(str) {
+	return function() {
+		return str;
+	}
+}
+
+// Create a function that takes an array of numbers and return the first and last 
+// elements as a new array.
+
+function firstLast(arr) {
+	return [arr.shift(), arr.pop()]
+}
+
+// or
+function firstLast(arr) {
+	return [arr[0], arr.pop()]
+}
+
 
 
 
