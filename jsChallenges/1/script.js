@@ -185,6 +185,28 @@ function firstLast(arr) {
 	return [arr[0], arr.pop()]
 }
 
+// Create a function that takes an array of names and returns an array with the first 
+// letter capitalized.
+
+function strCapper(str){
+  let newStr = "";
+  newStr += str.charAt(0).toUpperCase() + str.slice(1)
+
+  return newStr
+};
+
+function arrPasser(passedArray){
+  let workingArray = []
+
+  for (i=0; i< passedArray.length; i++){
+    workingArray.push(strCapper(passedArray[i]))
+  }
+
+  return workingArray
+}
+
+console.log(arrPasser(['Samuel', 'Mabelle', 'Letitia', 'Meridith']))
+
 
 
 
