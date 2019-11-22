@@ -3,25 +3,26 @@ computer_score = 0;
 round_score = 0;
 die = null;
 turn = "player";
-roll_again = prompt("Roll?");
+roll_again = null;
 
 function player_turn(){
     round_score = 0
-    roll_again = "yes"
+    roll_again = prompt("Roll?")
     
     while (roll_again == "yes"){
 
-        if (player_score >= 100){
-            alert("You win!")
-        } else if (computer_score >= 100){
-            alert("You lose!")
-        }
-
+     
         die = (Math.floor(Math.random() * 6) + 1 )
         console.log(`The player rolled a ${die}`)
     
         if (die != 1){
             round_score += die
+
+            if (player_score + round_score >= 100){
+            alert("You win!")
+            break
+           }
+
             console.log("Player round score: " + round_score);
             roll_again = prompt("Roll again?")
         } else {
@@ -29,13 +30,14 @@ function player_turn(){
             roll_again = "no"
             round_score = 0
         }
+
+        
     }
+     
     player_score += round_score
     console.log(player_score + "player score");
     console.log(round_score + "player round score");
     turn = "computer"
-    //computer_turn()
-    
         
 };
 
@@ -47,51 +49,37 @@ function computer_turn(){
 
     while (roll_again == "yes"){
 
-        if (player_score >= 100){
-            alert("You win!")
-            break
-        } else if (computer_score >= 100){
-            alert("You lose!")
-            break
-        } 
-
+       
         die = (Math.floor(Math.random() * 6) + 1 )
         console.log(die + " computer die roll")
     
         if (die != 1){
             round_score += die
+            if (computer_score + round_score >= 100){
+            alert("You lose!")
+            break
+            }
         } else {
             round_score = 0
             roll_again = "no"
         }
 
         if (round_score > 14){
-            computer_score += round_score
+            if (computer_score + round_score >= 100){
+            alert("You lose!")
+            }
             console.log(computer_score + "computer score");
             console.log(round_score + "computer round score");
             roll_again = "no"
         } 
+
     }
     computer_score += round_score
     console.log(computer_score + "computer score");
     console.log(round_score + "computer round score"); 
     turn = "player"
+
 };
-
-// function end_game(){
-//     if (player_score >= 100){
-//         alert("You win!")
-//     }
-//     if (computer_score >= 100){
-//         alert("You lose!")
-//     }
-// };
-
-
-// while (computer_score  < 100 || player_score < 100){
-// 	player_turn()
-// };
-
 
 while (computer_score  < 100 && player_score < 100){
     if (turn == "player"){
@@ -100,9 +88,6 @@ while (computer_score  < 100 && player_score < 100){
         computer_turn()
     }
 };
+
 console.log("The end.")
 
-
-// while(false && true){
-//     //run code
-// }
