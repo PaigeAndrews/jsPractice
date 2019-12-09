@@ -6,12 +6,13 @@ body{
 
 .playerContainer{
     background-color: rgb(100,160,189);
-/*     background-color: red; */
     width: 50%;
     height: 100%;
     margin: 0;
-    display: inline-block;
-    float: left;
+    display: flex;
+    justify-content: center;
+    /* display: inline-block; */
+    /* float: left; */
 }
 
 .computerContainer{
@@ -19,13 +20,34 @@ body{
     width: 50%;
     height: 100%;
     margin: 0;
-    display: inline-block;
-    float: right;
+    display: flex;
+    justify-content: center;
+    /* display: inline-block;
+    float: right;*/
+} 
+
+.Icon{
+    width: 100px;
+    height: 100px;
+    /* margin-left: 40%; */
 }
 
-.playerIcon{
-    background-image: url("https://imgur.com/tRJ810R");
-    width: 200px;
-    height: 250px;
- 
+/* @media screen and (max-width: 768px){
+    .Icon{
+        margin-left: 35%;
+    }
 }
+
+@media screen and (max-width: 480px){
+    .Icon{
+        margin-left: 20%;
+    }
+}
+
+@media screen and (max-width: 414px){
+    .Icon{
+        margin-left: 27%;
+        width: 100px;
+        height: 100px;
+    }
+} */
