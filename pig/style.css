@@ -1,35 +1,57 @@
+html{
+    margin: 0;
+}
+
 body{
     margin: 0;
     padding: 0;
     height: 100%;
+    
 }
 
-.playerContainer{
+.playerContainer{    
+    
     background-color: rgb(100,160,189);
     width: 50%;
     height: 100%;
     margin: 0;
-    display: flex;
+    padding: 0;
+    display: inline-flex;
     justify-content: center;
-    /* display: inline-block; */
-    /* float: left; */
+    float: left;
+    align-items: flex-start;
+    /* flex-direction: row; */
+    
 }
 
 .computerContainer{
+    
     background-color: rgb(137,172,189);
     width: 50%;
     height: 100%;
     margin: 0;
-    display: flex;
+    padding: 0; 
+    display: inline-flex;
     justify-content: center;
-    /* display: inline-block;
-    float: right;*/
+    float: left;
+    align-items: flex-start;
+    /* flex-direction: row; */
+
 } 
 
 .Icon{
+    margin: 0;
+    padding: 0;
     width: 100px;
     height: 100px;
-    /* margin-left: 40%; */
+    display: block;
+    clear:both;
+}
+
+h1{
+    clear:both;
+    color: white;
+    display: block;
 }
 
 /* @media screen and (max-width: 768px){
