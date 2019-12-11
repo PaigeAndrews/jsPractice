@@ -50,48 +50,55 @@ body{
     width: 100px;
     height: 100px;
     text-align: center;
-    
+    justify-content: center;
 }
 
 h1{
     font-size: 20px;
     color: white;
-    
+    text-align: center;
 }
 
 .totalScore{
     font-size:50px;
     color: white;
     text-align: center;
+    margin: 15px 0px;
 }
 
- @media screen and (min-height: 1000px){
-    .Icon{
-       width: 150px;
-       height: 150px;
-       
-    }
+.image-container {
+    display: flex;
+    justify-content: center;
+  }
+
+.dice{
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+}
+
+@media screen and (min-height: 640px){
+    
 }
 
 @media screen and (min-width: 750px){
     h1{
         font-size: 30px;
     }
-    .Icon{
-        margin-left: 10%;
-    }
-}
-
-/* @media screen and (max-width: 480px){
-    .Icon{
-        margin-left: 20%;
-    }
-}
-
-@media screen and (max-width: 414px){
-    .Icon{
-        margin-left: 27%;
+    .dice{
         width: 100px;
         height: 100px;
     }
-}  */
+}
+
+ @media screen and (min-height: 800px){
+    .Icon{
+       width: 150px;
+       height: 150px; 
+    }
+    .totalScore{
+        margin: 50px 0px;
+     }
+}
+
+
