@@ -187,7 +187,7 @@ h1{
     } */
 }
 
-@media screen and (min-height: 700px){
+@media screen and (min-height: 730px){
     .dice{
         width: 80px;
         height: 80px;
@@ -220,7 +220,18 @@ h1{
         height: 27vh;
     }
    
-}
+/* @media screen and (min-width: 1300px){
+    .roll-again-icon{
+        width: 180px;
+        height: 180px;
+    }
+    .hand-icon{
+        width: 170px;
+        height: 170px;
+    }
+} */
+
+
 
  @media screen and (min-height: 800px){
     .Icon{
@@ -315,7 +326,7 @@ h1{
         margin-top: 8vh;
     }
     .button-options{
-        width: 300px;
+        width: 150px;
         height: 50px;
         margin-top: 9vh;
         padding-top:15px;
