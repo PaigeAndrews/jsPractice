@@ -7,7 +7,7 @@ body{
     padding: 0;
     width: 100%;
     height: 100%;
-    
+    font-family: 'Baloo Bhai', cursive;
 }
 
 .header-container{
@@ -61,13 +61,16 @@ h1{
     font-size: 4vh;
     color: white;
     text-align: center;
+    margin: 0px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .totalScore{
-    font-size: 8vh;
+    font-size: 6vh;
     color: white;
     text-align: center;
-    margin: 15px 0px;
+    text-shadow: 2px 2px 4px #000000;
+    padding: 0px;
 }
 
 .image-container {
@@ -79,19 +82,20 @@ h1{
 
 .dice{
     width: 10vh;
-  height:auto;
+    height:auto;
 }
 
 .red-button{
     color:black;
     background-color: #F85252;
     text-align: center;
-    margin: 25px 0px;
+    margin: 15px 0px;
     margin-bottom: 5vh;
     padding: 12px;
+    padding-bottom: 0px;
     border: none;
     border-radius: 7px;
-    font-size: 3.5vh;
+    font-size: 3vh;
 }
 
 .round-score{
@@ -123,15 +127,18 @@ h1{
 
 .button-options{
     background-color:white;
-    color:black;
+    color:#276583;
+    font-size: 1rem;
     width: 5rem;
     height: 2rem;
     border-radius: 7px;
     text-align: center;
     margin-top: 4vh;
-    font-size: 1rem;
+    box-shadow: 2px 2px 4px #000000;
     padding-top: 7px;
 }
+
+   
 
 .roll-again-icon{
     width: auto;
@@ -186,11 +193,9 @@ h1{
     .button-options{
         width: 10rem;
         height: 3.5rem;
-        border-radius: 7px;
-        margin-top: 4vh;
-        font-size: 2rem;
         padding-top: 11px;
+        font-size: 2rem;
     }
+    
 }
-
 
