@@ -91,7 +91,7 @@ h1{
     text-align: center;
     margin: 15px 0px;
     margin-bottom: 5vh;
-    padding: 12px;
+    padding: 9px;
     padding-bottom: 0px;
     border: none;
     border-radius: 7px;
@@ -136,15 +136,39 @@ h1{
     margin-top: 4vh;
     box-shadow: 2px 2px 4px #000000;
     padding-top: 7px;
+    transition: 0.5s;
 }
 
-   
+.button-options:hover{
+    background-color:#276583;
+    color: white;
+    /* box-shadow: 2px 2px 4px white; */
+}
+
+.button-options:active{
+    background-color:#276583;
+    color: white;
+    -webkit-transition: all 2s ease;  
+    -moz-transition: all 2s ease;  
+    -o-transition: all 2s ease;  
+    -ms-transition: all 2s ease;  
+    transition: all 2s ease;
+    height:2.5rem;
+    width:5.5rem;
+    font-size: 1.5rem;
+
+}
+  
+/* .button-options:active ~ .roll-again-icon{
+    height:20vh;
+} */
 
 .roll-again-icon{
     width: auto;
     height: 10vh;
     padding: 2vh;
 }
+
 
 .hand-icon{
     padding: 2vh 3vh 2vh 3vh;
