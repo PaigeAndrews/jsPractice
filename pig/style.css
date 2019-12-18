@@ -10,7 +10,7 @@ body{
     font-family: 'Baloo Bhai', cursive;
 }
 
-.header-container{
+.headerContainer{
     width: 100%;
     height: 70vh;
 }
@@ -26,8 +26,6 @@ body{
     justify-content: center;
     float: left;
     align-items: flex-start;
-    
-    
 }
 
 .computerContainer{
@@ -73,7 +71,7 @@ h1{
     padding: 0px;
 }
 
-.image-container {
+.imageContainer {
     display: flex;
     justify-content: center;
     margin-top: 3vh;
@@ -85,7 +83,7 @@ h1{
     height:auto;
 }
 
-.red-button{
+.redButton{
     color:black;
     background-color: #F85252;
     text-align: center;
@@ -98,18 +96,18 @@ h1{
     font-size: 3vh;
 }
 
-.round-score{
+.roundScore{
     margin: 5px 0px;
 }
 
-.bottom-container{
+.bottomContainer{
     width:100%;
     height: 27vh;
     background-color: #276583;
     overflow: hidden; 
 }
 
-.roll-again-container{
+.rollAgainContainer{
     background-color: #276583;
     width:100%;
     height: 50%;
@@ -117,7 +115,7 @@ h1{
     justify-content: center;
 }
 
- .hold-container{
+ .holdContainer{
     height: 50%;
     display: flex;
     background-color: #276583;
@@ -125,7 +123,7 @@ h1{
     justify-content: center;
  }
 
-.button-options{
+.buttonOptions{
     background-color:white;
     color:#276583;
     font-size: 1rem;
@@ -139,13 +137,13 @@ h1{
     transition: 0.5s;
 }
 
-.button-options:hover{
+.buttonOptions:hover{
     background-color:#276583;
     color: white;
     /* box-shadow: 2px 2px 4px white; */
 }
 
-.button-options:active{
+.buttonOptions:active{
     background-color:#276583;
     color: white;
     -webkit-transition: all 2s ease;  
@@ -163,14 +161,14 @@ h1{
     height:20vh;
 } */
 
-.roll-again-icon{
+.rollAgainIcon{
     width: auto;
     height: 10vh;
     padding: 2vh;
 }
 
 
-.hand-icon{
+.handIcon{
     padding: 2vh 3vh 2vh 3vh;
     width: auto;
     height: 8vh;
@@ -192,29 +190,29 @@ h1{
 
 
 @media screen and (min-width:765px){
-    .roll-again-container{
+    .rollAgainContainer{
         display: inline-flex;
         float: left;
         align-items: center;
         width: 50vw;
         height: 27vh;
     }
-    .hold-container{
+    .holdContainer{
         display: inline-flex;
         float: left;
         align-items: center;
         width: 50vw;
         height: 27vh;
     }
-    .roll-again-icon{
+    .rollAgainIcon{
         width: auto;
         height: 17vh;
     }
-    .hand-icon{
+    .handIcon{
         width: auto;
         height: 12vh;
     }
-    .button-options{
+    .buttonOptions{
         width: 10rem;
         height: 3.5rem;
         padding-top: 11px;
