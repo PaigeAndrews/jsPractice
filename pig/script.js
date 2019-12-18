@@ -4,7 +4,8 @@ let playerRoundScoreDisplay = document.querySelector("#playerRoundScoreDisplay")
 let computerRoundScoreDisplay = document.querySelector("#computerRoundScoreDisplay")
 let rollButton = document.querySelector("#rollDie")
 let holdButton = document.querySelector("#hold")
-
+let playerIcon = document.querySelector("#playerIcon")
+let computerIcon = document.querySelector("#computerIcon")
 
 let mainPictures = ["D:\Pictures\1-\human.png", "D:\Pictures\1-\humanTWO.png", "D:\Pictures\1-\robot-face-6-1074719.png",
 "D:\Pictures\1-\robot-face-6-1074719TWO.png"];
@@ -20,14 +21,16 @@ playerScore = 0;
 computerScore = 0;
 roundScore = 0;
 die = null;
-turn = "player";
+turn = null;
 rollAgain = null;
 
 function playerTurn(){
+    turn = "player"
     roundScore = 0
     // rollAgain = prompt("Roll?")
-    
-    while (rollAgain == "yes"){
+    playerIcon.innerHTML = mainPictures[1]
+    computerIcon.innerHTML = mainPictures[2]
+    while (rollAgain= "yes"){
 
      
         die = (Math.floor(Math.random() * 6) + 1 )
@@ -43,11 +46,12 @@ function playerTurn(){
            playerRoundScoreDisplay.innerHTML = roundScore  
             console.log("Player round score: " + roundScore);
             // rollAgain = prompt("Roll again?")
-            rollButton.addEventListener("click", playerTurn);
         } else {
+            roundScore = 0
+            playerRoundScoreDisplay.innerHTML = roundScore
             console.log("Player turn over")
             rollAgain = "no"
-            roundScore = 0
+            
         }
 
         
@@ -64,6 +68,8 @@ function playerTurn(){
 function computerTurn(){
     roundScore = 0
     turn = "computer"
+    playerIcon.innerHTML = mainPictures[0]
+    computerIcon.innerHTML = mainPictures[3]
     rollAgain = "yes"
 
     while (rollAgain == "yes"){
@@ -74,12 +80,14 @@ function computerTurn(){
     
         if (die != 1){
             roundScore += die
+            computerRoundScoreDisplay.innerHTML = roundScore
             if (computerScore + roundScore >= 100){
             alert("You lose!")
             break
             }
         } else {
             roundScore = 0
+            computerRoundScoreDisplay.innerHTML = roundScore
             rollAgain = "no"
         }
 
@@ -103,10 +111,10 @@ function computerTurn(){
 while (computerScore  < 100 && playerScore < 100){
     if (turn == "player"){
         playerTurn()
-    } else {
+    } else if(turn == "computer"){
         computerTurn()
     }
 };
 
-console.log("The end.")
+// console.log("The end.")
 
