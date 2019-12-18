@@ -13,99 +13,100 @@ let dicePictures =["D:\Pictures\1-\die1.png", "D:\Pictures\1-\2.png", "D:\Pictur
 "D:\Pictures\1-\4.png", "D:\Pictures\1-\5.png", "D:\Pictures\1-\6.png"
 ];
 
-roll_btn.addEventListener("click", playerTurn);
+rollButton.addEventListener("click", playerTurn);
 
 
-// playerScore = 0;
-// computerScore = 0;
-// roundScore = 0;
-// die = null;
-// turn = "player";
-// rollAgain = null;
+playerScore = 0;
+computerScore = 0;
+roundScore = 0;
+die = null;
+turn = "player";
+rollAgain = null;
 
-// function playerTurn(){
-//     roundScore = 0
-//     rollAgain = prompt("Roll?")
+function playerTurn(){
+    roundScore = 0
+    // rollAgain = prompt("Roll?")
     
-//     while (rollAgain == "yes"){
+    while (rollAgain == "yes"){
 
      
-//         die = (Math.floor(Math.random() * 6) + 1 )
-//         console.log(`The player rolled a ${die}`)
+        die = (Math.floor(Math.random() * 6) + 1 )
+        console.log(`The player rolled a ${die}`)
 
-//         if (die != 1){
-//             roundScore += die
+        if (die != 1){
+            roundScore += die
 
-//             if (playerScore + roundScore >= 100){
-//             alert("You win!")
-//             break
-//            }
-//            playerScore.innerHTML = playerScore    
-//             console.log("Player round score: " + roundScore);
-//             rollAgain = prompt("Roll again?")
-//         } else {
-//             console.log("Player turn over")
-//             rollAgain = "no"
-//             roundScore = 0
-//         }
+            if (playerScore + roundScore >= 100){
+            alert("You win!")
+            break
+           }
+           playerRoundScoreDisplay.innerHTML = roundScore  
+            console.log("Player round score: " + roundScore);
+            // rollAgain = prompt("Roll again?")
+            rollButton.addEventListener("click", playerTurn);
+        } else {
+            console.log("Player turn over")
+            rollAgain = "no"
+            roundScore = 0
+        }
 
         
-//     }
+    }
      
-//     playerScore += roundScore
-//     console.log(playerScore + "player score");
-//     console.log(roundScore + "player round score");
-//     turn = "computer"
+    playerScore += roundScore
+    console.log(playerScore + "player score");
+    console.log(roundScore + "player round score");
+    turn = "computer"
         
-// };
+};
 
 
-// function computerTurn(){
-//     roundScore = 0
-//     turn = "computer"
-//     rollAgain = "yes"
+function computerTurn(){
+    roundScore = 0
+    turn = "computer"
+    rollAgain = "yes"
 
-//     while (rollAgain == "yes"){
+    while (rollAgain == "yes"){
 
        
-//         die = (Math.floor(Math.random() * 6) + 1 )
-//         console.log(die + " computer die roll")
+        die = (Math.floor(Math.random() * 6) + 1 )
+        console.log(die + " computer die roll")
     
-//         if (die != 1){
-//             roundScore += die
-//             if (computerScore + roundScore >= 100){
-//             alert("You lose!")
-//             break
-//             }
-//         } else {
-//             roundScore = 0
-//             rollAgain = "no"
-//         }
+        if (die != 1){
+            roundScore += die
+            if (computerScore + roundScore >= 100){
+            alert("You lose!")
+            break
+            }
+        } else {
+            roundScore = 0
+            rollAgain = "no"
+        }
 
-//         if (roundScore > 14){
-//             if (computerScore + roundScore >= 100){
-//             alert("You lose!")
-//             }
-//             console.log(computerScore + "computer score");
-//             console.log(roundScore + "computer round score");
-//             rollAgain = "no"
-//         } 
+        if (roundScore > 14){
+            if (computerScore + roundScore >= 100){
+            alert("You lose!")
+            }
+            console.log(computerScore + "computer score");
+            console.log(roundScore + "computer round score");
+            rollAgain = "no"
+        } 
 
-//     }
-//     computerScore += roundScore
-//     console.log(computerScore + "computer score");
-//     console.log(roundScore + "computer round score"); 
-//     turn = "player"
+    }
+    computerScore += roundScore
+    console.log(computerScore + "computer score");
+    console.log(roundScore + "computer round score"); 
+    turn = "player"
 
-// };
+};
 
-// while (computerScore  < 100 && playerScore < 100){
-//     if (turn == "player"){
-//         playerTurn()
-//     } else {
-//         computerTurn()
-//     }
-// };
+while (computerScore  < 100 && playerScore < 100){
+    if (turn == "player"){
+        playerTurn()
+    } else {
+        computerTurn()
+    }
+};
 
-// console.log("The end.")
+console.log("The end.")
 
