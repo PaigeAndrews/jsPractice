@@ -18,7 +18,9 @@ rollButton.addEventListener("click", playerTurn);
 
 holdButton.addEventListener("click", function(){
     playerTotalScoreDisplay.innerHTML = playerScore
-    turn = "computer"
+    roundScore = 0
+    playerRoundScoreDisplay.innerHTML = roundScore
+    computerTurn()
 });
 
 playerScore = 0;
@@ -53,8 +55,9 @@ function playerTurn(){
         } else {
             roundScore = 0
             playerRoundScoreDisplay.innerHTML = roundScore
-            turn = "computer"
+            // turn = "computer"
             console.log("Player turn over")
+            computerTurn()
             // rollAgain = "no"
             
         }
@@ -87,8 +90,8 @@ function computerTurn(){
             roundScore += die
             computerRoundScoreDisplay.innerHTML = roundScore
             if (computerScore + roundScore >= 100){
-            alert("You lose!")
-            break
+                alert("You lose!")
+                break
             }
         } else {
             roundScore = 0
@@ -100,6 +103,7 @@ function computerTurn(){
             if (computerScore + roundScore >= 100){
             alert("You lose!")
             }
+           
             console.log(computerScore + "computer score");
             console.log(roundScore + "computer round score");
             rollAgain = "no"
@@ -107,22 +111,25 @@ function computerTurn(){
 
     }
     computerScore += roundScore
+    computerTotalScoreDisplay.innerHTML = playerScore
+    roundScore = 0
+    computerRoundScoreDisplay.innerHTML = roundScore
     console.log(computerScore + "computer score");
     console.log(roundScore + "computer round score"); 
     turn = "player"
 
 };
 
-while (computerScore  < 100 && playerScore < 100){
+// while (computerScore  < 100 && playerScore < 100){
     // if (turn == "player"){
     //     playerTurn()
     // } else 
-    if(turn == "computer"){
-        computerTurn()
-    } else {
-        break
-    }
-};
+//     if(turn == "computer"){
+//         computerTurn()
+// //     } else {
+//         break
+//     }
+// };
 
 // console.log("The end.")
 
