@@ -16,6 +16,10 @@ let dicePictures =["D:\Pictures\1-\die1.png", "D:\Pictures\1-\2.png", "D:\Pictur
 
 rollButton.addEventListener("click", playerTurn);
 
+holdButton.addEventListener("click", function(){
+    playerTotalScoreDisplay.innerHTML = playerScore
+    turn = "computer"
+});
 
 playerScore = 0;
 computerScore = 0;
@@ -26,11 +30,11 @@ rollAgain = null;
 
 function playerTurn(){
     turn = "player"
-    roundScore = 0
+    // roundScore = 0
     // rollAgain = prompt("Roll?")
     playerIcon.innerHTML = mainPictures[1]
     computerIcon.innerHTML = mainPictures[2]
-    while (rollAgain= "yes"){
+    // while (rollAgain= "yes"){
 
      
         die = (Math.floor(Math.random() * 6) + 1 )
@@ -41,7 +45,7 @@ function playerTurn(){
 
             if (playerScore + roundScore >= 100){
             alert("You win!")
-            break
+            // break
            }
            playerRoundScoreDisplay.innerHTML = roundScore  
             console.log("Player round score: " + roundScore);
@@ -49,18 +53,19 @@ function playerTurn(){
         } else {
             roundScore = 0
             playerRoundScoreDisplay.innerHTML = roundScore
+            turn = "computer"
             console.log("Player turn over")
-            rollAgain = "no"
+            // rollAgain = "no"
             
         }
 
         
-    }
+    // }
      
     playerScore += roundScore
     console.log(playerScore + "player score");
     console.log(roundScore + "player round score");
-    turn = "computer"
+    
         
 };
 
@@ -109,10 +114,13 @@ function computerTurn(){
 };
 
 while (computerScore  < 100 && playerScore < 100){
-    if (turn == "player"){
-        playerTurn()
-    } else if(turn == "computer"){
+    // if (turn == "player"){
+    //     playerTurn()
+    // } else 
+    if(turn == "computer"){
         computerTurn()
+    } else {
+        break
     }
 };
 
