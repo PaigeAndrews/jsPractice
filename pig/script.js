@@ -17,9 +17,9 @@ let dicePictures =["D:\Pictures\1-\die1.png", "D:\Pictures\1-\2.png", "D:\Pictur
 rollButton.addEventListener("click", playerTurn);
 
 holdButton.addEventListener("click", function(){
+    playerScore += roundScore
     playerTotalScoreDisplay.innerHTML = playerScore
-    roundScore = 0
-    playerRoundScoreDisplay.innerHTML = roundScore
+    playerRoundScoreDisplay.innerHTML = 0
     computerTurn()
 });
 
@@ -46,12 +46,10 @@ function playerTurn(){
             roundScore += die
 
             if (playerScore + roundScore >= 100){
-            alert("You win!")
-            // break
-           }
-           playerRoundScoreDisplay.innerHTML = roundScore  
+                alert("You win!")
+            }
+            playerRoundScoreDisplay.innerHTML = roundScore  
             console.log("Player round score: " + roundScore);
-            // rollAgain = prompt("Roll again?")
         } else {
             roundScore = 0
             playerRoundScoreDisplay.innerHTML = roundScore
@@ -65,7 +63,7 @@ function playerTurn(){
         
     // }
      
-    playerScore += roundScore
+    //playerScore += roundScore
     console.log(playerScore + "player score");
     console.log(roundScore + "player round score");
     
@@ -111,7 +109,7 @@ function computerTurn(){
 
     }
     computerScore += roundScore
-    computerTotalScoreDisplay.innerHTML = playerScore
+    computerTotalScoreDisplay.innerHTML = computerScore
     roundScore = 0
     computerRoundScoreDisplay.innerHTML = roundScore
     console.log(computerScore + "computer score");
