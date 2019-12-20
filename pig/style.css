@@ -140,7 +140,6 @@ h1{
 .buttonOptions:hover{
     background-color:#276583;
     color: white;
-    /* box-shadow: 2px 2px 4px white; */
 }
 
 .buttonOptions:active{
@@ -156,10 +155,6 @@ h1{
     font-size: 1.5rem;
 
 }
-  
-/* .button-options:active ~ .roll-again-icon{
-    height:20vh;
-} */
 
 .rollAgainIcon{
     width: auto;

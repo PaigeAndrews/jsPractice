@@ -2,20 +2,28 @@ let playerTotalScoreDisplay = document.querySelector("#playerTotalScore")
 let computerTotalScoreDisplay = document.querySelector("#computerTotalScore")
 let playerRoundScoreDisplay = document.querySelector("#playerRoundScoreDisplay")
 let computerRoundScoreDisplay = document.querySelector("#computerRoundScoreDisplay")
+let playerDiceImage = document.querySelector("#playerDiceImage")
+let computerDiceImage = document.querySelector("#computerDiceImage")
 let rollButton = document.querySelector("#rollDie")
 let holdButton = document.querySelector("#hold")
 let playerIcon = document.querySelector("#playerIcon")
 let computerIcon = document.querySelector("#computerIcon")
 
-let mainPictures = ["D:\Pictures\1-\human.png", "D:\Pictures\1-\humanTWO.png", "D:\Pictures\1-\robot-face-6-1074719.png",
-"D:\Pictures\1-\robot-face-6-1074719TWO.png"];
+// playerDiceImage.src = "images/4.png"
 
-let dicePictures =["D:\Pictures\1-\die1.png", "D:\Pictures\1-\2.png", "D:\Pictures\1-\3.png",
-"D:\Pictures\1-\4.png", "D:\Pictures\1-\5.png", "D:\Pictures\1-\6.png"
+// the sites images: the main icon of robot and player and red eyes signifying whose turn is current
+let mainPictures = ["images/human.png", "images/humanTWO.png", "images/robot-face-6-1074719.png",
+"images/robot-face-6-1074719TWO.png"];
+
+// the site images: each face of the die
+let dicePictures =["images/die1.png", "images/2.png", "images/3.png",
+"images/4.png", "images/5.png", "images/6.png"
 ];
 
+// clicking the roll die button
 rollButton.addEventListener("click", playerTurn);
 
+// clicking the hold turn button
 holdButton.addEventListener("click", function(){
     playerScore += roundScore
     playerTotalScoreDisplay.innerHTML = playerScore
@@ -30,21 +38,20 @@ die = null;
 turn = null;
 rollAgain = null;
 
+
+// The player's turn function
 function playerTurn(){
     turn = "player"
-    // roundScore = 0
-    // rollAgain = prompt("Roll?")
-    playerIcon.innerHTML = mainPictures[1]
-    computerIcon.innerHTML = mainPictures[2]
-    // while (rollAgain= "yes"){
-
-     
+    playerIcon.src = mainPictures[1]
+    computerIcon.src = mainPictures[2]
+    
+    
         die = (Math.floor(Math.random() * 6) + 1 )
         console.log(`The player rolled a ${die}`)
 
         if (die != 1){
             roundScore += die
-
+            
             if (playerScore + roundScore >= 100){
                 alert("You win!")
             }
@@ -53,29 +60,21 @@ function playerTurn(){
         } else {
             roundScore = 0
             playerRoundScoreDisplay.innerHTML = roundScore
-            // turn = "computer"
             console.log("Player turn over")
-            computerTurn()
-            // rollAgain = "no"
-            
+            computerTurn()            
         }
 
-        
-    // }
-     
-    //playerScore += roundScore
     console.log(playerScore + "player score");
-    console.log(roundScore + "player round score");
-    
-        
+    console.log(roundScore + "player round score");      
 };
 
 
+// the computer's turn function
 function computerTurn(){
     roundScore = 0
     turn = "computer"
-    playerIcon.innerHTML = mainPictures[0]
-    computerIcon.innerHTML = mainPictures[3]
+    playerIcon.src = mainPictures[0]
+    computerIcon.src = mainPictures[3]
     rollAgain = "yes"
 
     while (rollAgain == "yes"){
@@ -117,17 +116,3 @@ function computerTurn(){
     turn = "player"
 
 };
-
-// while (computerScore  < 100 && playerScore < 100){
-    // if (turn == "player"){
-    //     playerTurn()
-    // } else 
-//     if(turn == "computer"){
-//         computerTurn()
-// //     } else {
-//         break
-//     }
-// };
-
-// console.log("The end.")
-
