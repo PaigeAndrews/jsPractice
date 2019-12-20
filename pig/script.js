@@ -9,21 +9,19 @@ let holdButton = document.querySelector("#hold")
 let playerIcon = document.querySelector("#playerIcon")
 let computerIcon = document.querySelector("#computerIcon")
 
-// playerDiceImage.src = "images/4.png"
-
 // the sites images: the main icon of robot and player and red eyes signifying whose turn is current
 let mainPictures = ["images/human.png", "images/humanTWO.png", "images/robot-face-6-1074719.png",
 "images/robot-face-6-1074719TWO.png"];
 
-// the site images: each face of the die
-let dicePictures =["images/die1.png", "images/2.png", "images/3.png",
+// the site images: each face of the die 
+let dicePictures = ["images/die1.png", "images/2.png", "images/3.png",
 "images/4.png", "images/5.png", "images/6.png"
 ];
 
-// clicking the roll die button
+// listening for a click on roll die button
 rollButton.addEventListener("click", playerTurn);
 
-// clicking the hold turn button
+// listening for a click of the hold your turn button that switches to the computers turn
 holdButton.addEventListener("click", function(){
     playerScore += roundScore
     playerTotalScoreDisplay.innerHTML = playerScore
@@ -39,7 +37,7 @@ turn = null;
 rollAgain = null;
 
 
-// The player's turn function
+// Controls the logic when it is the player's turn
 function playerTurn(){
     turn = "player"
     playerIcon.src = mainPictures[1]
@@ -47,6 +45,7 @@ function playerTurn(){
     
     
         die = (Math.floor(Math.random() * 6) + 1 )
+        playerDiceImage.src = dicePictures[die - 1]
         console.log(`The player rolled a ${die}`)
 
         if (die != 1){
@@ -69,7 +68,7 @@ function playerTurn(){
 };
 
 
-// the computer's turn function
+// Controls the logic when it is the player's turn
 function computerTurn(){
     roundScore = 0
     turn = "computer"
@@ -81,6 +80,7 @@ function computerTurn(){
 
        
         die = (Math.floor(Math.random() * 6) + 1 )
+        computerDiceImage.src = dicePictures[die - 1]
         console.log(die + " computer die roll")
     
         if (die != 1){
