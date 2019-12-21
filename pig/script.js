@@ -10,8 +10,8 @@ let playerIcon = document.querySelector("#playerIcon")
 let computerIcon = document.querySelector("#computerIcon")
 
 // the sites images: the main icon of robot and player and red eyes signifying whose turn is current
-let mainPictures = ["images/human.png", "images/humanTWO.png", "images/robot-face-6-1074719.png",
-"images/robot-face-6-1074719TWO.png"];
+let mainPictures = ["images/human.png", "images/human3.png", "images/robot-face-6-1074719.png",
+"images/robot3.png"];
 
 // the site images: each face of the die 
 let dicePictures = ["images/die1.png", "images/2.png", "images/3.png",
@@ -33,15 +33,13 @@ playerScore = 0;
 computerScore = 0;
 roundScore = 0;
 die = null;
-turn = null;
 rollAgain = null;
 
 
 // Controls the logic when it is the player's turn
 function playerTurn(){
-    turn = "player"
-    playerIcon.src = mainPictures[1]
-    computerIcon.src = mainPictures[2]
+    // playerIcon.src = mainPictures[1]
+    // computerIcon.src = mainPictures[2]
     
     
         die = (Math.floor(Math.random() * 6) + 1 )
@@ -71,7 +69,6 @@ function playerTurn(){
 // Controls the logic when it is the player's turn
 function computerTurn(){
     roundScore = 0
-    turn = "computer"
     playerIcon.src = mainPictures[0]
     computerIcon.src = mainPictures[3]
     rollAgain = "yes"
@@ -113,6 +110,20 @@ function computerTurn(){
     computerRoundScoreDisplay.innerHTML = roundScore
     console.log(computerScore + "computer score");
     console.log(roundScore + "computer round score"); 
-    turn = "player"
+    playerIcon.src = mainPictures[1]
+    computerIcon.src = mainPictures[2]
 
 };
+
+
+myVar = setInterval(function(){ alert("Hello"); }, 5000);
+clearInterval(myVar);
+// TO DO
+// -Change eyes for Icons 
+// -add pointer on hover buttons
+// -make the eyes glow red upon the players turn and not when they push roll
+// -play again button?
+// -change win/lose alert
+// -change timing for computer rolls 
+// -fix design
+
