@@ -140,6 +140,7 @@ h1{
 .buttonOptions:hover{
     background-color:#276583;
     color: white;
+    cursor: pointer;
 }
 
 .buttonOptions:active{

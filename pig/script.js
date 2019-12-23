@@ -116,8 +116,8 @@ function computerTurn(){
 };
 
 
-myVar = setInterval(function(){ alert("Hello"); }, 5000);
-clearInterval(myVar);
+// myVar = setInterval(function(){ alert("Hello"); }, 5000);
+// clearInterval(myVar);
 // TO DO
 // -Change eyes for Icons 
 // -add pointer on hover buttons
