@@ -136,6 +136,9 @@ h1{
     padding-top: 7px;
     transition: 0.5s;
 }
+.playAgainButton{
+    width: 7rem;
+}
 
 .buttonOptions:hover{
     background-color:#276583;
@@ -169,6 +172,16 @@ h1{
     width: auto;
     height: 8vh;
     
+}
+
+#playAgain{
+    display: none;
+    width:100%;
+    height: 27vh;
+    background-color: #276583;
+    color: white;
+    overflow: hidden; 
+    text-align: center;
 }
 
 .signature{

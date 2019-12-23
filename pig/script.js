@@ -8,6 +8,8 @@ let rollButton = document.querySelector("#rollDie")
 let holdButton = document.querySelector("#hold")
 let playerIcon = document.querySelector("#playerIcon")
 let computerIcon = document.querySelector("#computerIcon")
+let bottomContainer = document.querySelector(".bottomContainer")
+let playAgain = document.querySelector("#playAgain")
 
 // the sites images: the main icon of robot and player and red eyes signifying whose turn is current
 let mainPictures = ["images/human.png", "images/human3.png", "images/robot-face-6-1074719.png",
@@ -50,6 +52,8 @@ function playerTurn(){
             roundScore += die
             
             if (playerScore + roundScore >= 100){
+                bottomContainer.style.display = "none";
+                playAgain.style.display = "block";
                 alert("You win!")
             }
             playerRoundScoreDisplay.innerHTML = roundScore  
@@ -84,6 +88,8 @@ function computerTurn(){
             roundScore += die
             computerRoundScoreDisplay.innerHTML = roundScore
             if (computerScore + roundScore >= 100){
+                bottomContainer.style.display = "none";
+                playAgain.style.display = "block";
                 alert("You lose!")
                 break
             }
@@ -120,7 +126,6 @@ function computerTurn(){
 // clearInterval(myVar);
 // TO DO
 // -Change eyes for Icons 
-// -add pointer on hover buttons
 // -make the eyes glow red upon the players turn and not when they push roll
 // -play again button?
 // -change win/lose alert
