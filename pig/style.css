@@ -137,9 +137,14 @@ h1{
     transition: 0.5s;
 }
 .playAgainButton{
-    width: 7rem;
+    padding: 0px 7px 7px 7px;
+    display: inline;
 }
 
+.playAgainButtonStyle{
+    width: 7rem;
+    height: 3.5rem;
+}
 .buttonOptions:hover{
     background-color:#276583;
     color: white;
@@ -174,7 +179,7 @@ h1{
     
 }
 
-#playAgain{
+#playAgainContainer{
     display: none;
     width:100%;
     height: 27vh;
@@ -182,6 +187,13 @@ h1{
     color: white;
     overflow: hidden; 
     text-align: center;
+}
+
+.playAgain{
+    /* display: inline-flex; */
+  justify-content: center;
+  align-self: center;
+  margin-top: 9vh;
 }
 
 .signature{

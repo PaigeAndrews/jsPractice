@@ -9,7 +9,7 @@ let holdButton = document.querySelector("#hold")
 let playerIcon = document.querySelector("#playerIcon")
 let computerIcon = document.querySelector("#computerIcon")
 let bottomContainer = document.querySelector(".bottomContainer")
-let playAgain = document.querySelector("#playAgain")
+let playAgain = document.querySelector("#playAgainContainer")
 
 // the sites images: the main icon of robot and player and red eyes signifying whose turn is current
 let mainPictures = ["images/human.png", "images/human3.png", "images/robot-face-6-1074719.png",
