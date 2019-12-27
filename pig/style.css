@@ -15,8 +15,7 @@ body{
     height: 70vh;
 }
 
-.playerContainer{    
-    
+.playerContainer{   
     background-color: rgb(100,160,189);
     width: 50%;
     height:70vh;
@@ -28,8 +27,7 @@ body{
     align-items: flex-start;
 }
 
-.computerContainer{
-    
+.computerContainer{ 
     background-color: rgb(137,172,189);
     width: 50%;
     height:70vh;
@@ -43,11 +41,9 @@ body{
 
 .secondContainer{
     display: block;
-    
 }
 
 .Icon{
-    
     padding: 0;
     width: 15vh;
     height:auto;
@@ -136,6 +132,7 @@ h1{
     padding-top: 7px;
     transition: 0.5s;
 }
+
 .playAgainButton{
     padding: 0px 7px 7px 7px;
     display: inline;
@@ -162,7 +159,6 @@ h1{
     height:2.5rem;
     width:5.5rem;
     font-size: 1.5rem;
-
 }
 
 .rollAgainIcon{
@@ -176,7 +172,6 @@ h1{
     padding: 2vh 3vh 2vh 3vh;
     width: auto;
     height: 8vh;
-    
 }
 
 #playAgainContainer{
@@ -190,7 +185,6 @@ h1{
 }
 
 .playAgain{
-    /* display: inline-flex; */
   justify-content: center;
   align-self: center;
   margin-top: 9vh;

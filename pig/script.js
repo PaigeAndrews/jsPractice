@@ -10,6 +10,7 @@ let playerIcon = document.querySelector("#playerIcon")
 let computerIcon = document.querySelector("#computerIcon")
 let bottomContainer = document.querySelector(".bottomContainer")
 let playAgain = document.querySelector("#playAgainContainer")
+let playAgainButton = document.querySelector("#playAgainButton")
 
 // the sites images: the main icon of robot and player and red eyes signifying whose turn is current
 let mainPictures = ["images/human.png", "images/human3.png", "images/robot-face-6-1074719.png",
@@ -31,6 +32,10 @@ holdButton.addEventListener("click", function(){
     computerTurn()
 });
 
+playAgainButton.addEventListener("click", function(){
+    window.location.reload();
+});
+
 playerScore = 0;
 computerScore = 0;
 roundScore = 0;
@@ -40,9 +45,6 @@ rollAgain = null;
 
 // Controls the logic when it is the player's turn
 function playerTurn(){
-    // playerIcon.src = mainPictures[1]
-    // computerIcon.src = mainPictures[2]
-    
     
         die = (Math.floor(Math.random() * 6) + 1 )
         playerDiceImage.src = dicePictures[die - 1]
@@ -126,8 +128,7 @@ function computerTurn(){
 // clearInterval(myVar);
 // TO DO
 // -Change eyes for Icons 
-// -make the eyes glow red upon the players turn and not when they push roll
-// -play again button?
+// -play again button make it work
 // -change win/lose alert
 // -change timing for computer rolls 
 // -fix design
