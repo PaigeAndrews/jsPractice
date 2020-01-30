@@ -1,0 +1,202 @@
+body {
+	padding-top: 40px;
+	color: black;
+	font-family: 'Roboto';
+  margin: 0;
+  padding-top: 0;
+}
+
+h1 {
+	font-family: "Roboto Slab";
+}
+
+img {
+	width:100%;
+	border-radius: 5px;
+	border: 3px solid rgba(255, 255, 255, 0.8);
+}
+.parallax {		
+	height: 100%;
+	width: 100%;	
+	background-attachment: fixed;
+	background-image: url("http://hdwpro.com/wp-content/uploads/2015/12/nature-hd-wallpaper.jpg");
+	background-size: cover;
+	background-position: 50% 20%;
+}
+
+.wrapper {
+    position: relative;
+    padding: 0;    
+    display:block;
+}
+
+.text {
+    position: absolute;
+		padding: 10%;
+    top: 0;
+    color:black;
+    background-color:rgba(255,255,255,0.9);
+    width: 100%;
+    height: 100%;   
+    text-align: center;
+    z-index: 10;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.text:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+.text h3 {
+	font-size:18px;
+	font-family: "Roboto Slab";
+}
+.white {	
+	padding: 40px;
+	background: rgba(255, 255, 255, 1);
+}
+
+.black {
+	margin: 0;	
+	min-height: 600px;
+	padding: 60px;
+/* 	background: rgba(0, 0, 0, 0.5);	 */
+}
+
+.black .content {
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.content {
+	padding: 10%;	
+}
+
+.about p {
+	line-height: 2;
+}
+
+.portfolio .row {
+	margin-bottom: 24px;
+}
+
+.portfolio {
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.content h1 {	
+	font-size: 42px;
+	margin-bottom: 22px;
+}
+
+.content p {
+	font-size: 18px;	
+}
+
+/* .nav li:hover {
+	background: black;	
+	opacity: 0.8;
+}
+.nav.navbar-nav li:hover a {
+	color: #e7e7e7;	
+} */
+
+footer p {
+	font-size: 12px;
+	margin-bottom: 0px;
+}
+
+.panel {
+	margin-bottom: 0px;
+	color: rgba(255, 255,255, 0.7);
+}
+.panel-footer {
+	background-color: rgba(0 ,0 ,0, 0.8);
+}
+
+.btn-grey {
+	background-color: #A0A0A0;
+}
+
+a.btn-grey {
+	color: white;
+}
+
+.btn-grey:hover {
+	background-color: #909090;
+}
+	
+a.btn-grey:hover {
+	color: white;	
+}
+
+
+ .navbar {
+  overflow: visable;
+  background-color: grey;
+   width: 100%;
+margin-top: 0px;
+   position: sticky;
+    top: 0;
+   height: 50px;
+   
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  position: relative;
+  float: left;
+/*   overflow: visable; */
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: right;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
