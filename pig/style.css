@@ -8,6 +8,10 @@ body{
     width: 100%;
     height: 100%;
     font-family: 'Baloo Bhai', cursive;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .headerContainer{
@@ -45,8 +49,8 @@ body{
 
 .Icon{
     padding: 0;
-    width: 15vh;
-    height:auto;
+    height: 15vh;
+    width: auto;
     text-align: center;
     justify-content: center;
 }
@@ -75,13 +79,14 @@ h1{
   }
 
 .dice{
-    width: 10vh;
-    height:auto;
+    height: 10vh;
+    width: auto;
+    
 }
 
 .redButton{
     color:black;
-    background-color: #F85252;
+    background-color: #ff8080;
     text-align: center;
     margin: 15px 0px;
     margin-bottom: 5vh;
@@ -134,31 +139,12 @@ h1{
 }
 
 .playAgainButton{
-    padding: 0px 7px 7px 7px;
+    padding: 0px 10px 7px 10px;
     display: inline;
 }
 
 .playAgainButtonStyle{
-    width: 7rem;
-    height: 3.5rem;
-}
-.buttonOptions:hover{
-    background-color:#276583;
-    color: white;
-    cursor: pointer;
-}
-
-.buttonOptions:active{
-    background-color:#276583;
-    color: white;
-    -webkit-transition: all 2s ease;  
-    -moz-transition: all 2s ease;  
-    -o-transition: all 2s ease;  
-    -ms-transition: all 2s ease;  
-    transition: all 2s ease;
-    height:2.5rem;
-    width:5.5rem;
-    font-size: 1.5rem;
+    font-size: 5vh;
 }
 
 .rollAgainIcon{
@@ -174,6 +160,20 @@ h1{
     height: 8vh;
 }
 
+.questionIcon{
+    width: auto;
+    height: 5vh;
+    float: left;
+    padding: 0;
+    position: absolute;
+    left: 3%;
+    bottom: 5%;
+} 
+
+.questionIcon:hover{
+    cursor: pointer;
+}
+
 #playAgainContainer{
     display: none;
     width:100%;
@@ -184,10 +184,73 @@ h1{
     text-align: center;
 }
 
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 5vh; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  
+  .modal-content {
+    background-color: rgb(100,160,189);
+    border-radius: 7px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #000;
+    width: 70%;
+  }
+
+    p {
+    text-align: center;
+    }
+
+    ul{
+        list-style-position: inside;
+    }
+
+  #pigRules{
+      text-align:center;
+      color: #ff8080;
+      text-shadow: 1px 1px 2px red;
+  }
+
+  #ulContainer{
+    
+    border-left: 11px solid #ff8080;
+    background-color: lightgrey;
+    border-radius: 0 10px 10px 0;
+  }
+ 
+  .close {
+    color: black;
+    float: right;
+    font-size: 38px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #ff8080;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+#winLose{
+    margin: 3vh 0 3vh 0;
+    font-size: 4.5vh;
+}
+
 .playAgain{
   justify-content: center;
   align-self: center;
-  margin-top: 9vh;
 }
 
 .signature{
@@ -202,7 +265,6 @@ h1{
     padding-top: 0.5vh;
     padding-left: 1vw;
 }
-
 
 @media screen and (min-width:765px){
     .rollAgainContainer{
@@ -222,6 +284,7 @@ h1{
     .rollAgainIcon{
         width: auto;
         height: 17vh;
+        padding:0;
     }
     .handIcon{
         width: auto;
@@ -233,6 +296,21 @@ h1{
         padding-top: 11px;
         font-size: 2rem;
     }
-    
+    .playAgainButtonStyle{
+        font-size: 6vh;
+    }
+    .questionIcon{
+        top: 5%;
+    }
 }
+
+@media screen and (min-width: 1025px){
+    .buttonOptions:hover{
+        background-color:#276583;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+
 
