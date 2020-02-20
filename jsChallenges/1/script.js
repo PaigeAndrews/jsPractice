@@ -208,5 +208,102 @@ function arrPasser(passedArray){
 console.log(arrPasser(['Samuel', 'Mabelle', 'Letitia', 'Meridith']))
 
 
+// John is playing a dice game. The rules are as follows.
 
+// Roll two dice.
+// Add the numbers on the dice together.
+// Add the total to your overall score.
+// Repeat this for three rounds.
+// But if you roll DOUBLES, your score is instantly wiped to 0 and your game ends immediately!
+
+// Create a function which takes in a matrix as input, and return John's score after his game has ended.
+
+function diceGame(arr) {
+	let total = 0;
+	for(let [R1, R2] of arr) {
+		if (R1 === R2) {
+			total = 0;
+			break;
+		}
+		total += (R1 + R2);
+	}
+	return total;
+}
+
+
+// Create a function that returns true if the first array can be nested inside the second.
+
+// arr1 can be nested inside arr2 if:
+
+// arr1's min is greater than arr2's min.
+// arr1's max is less than arr2's max.
+
+function canNest(arr1, arr2) {
+	if ((Math.min(...arr1) > Math.min(...arr2)) &&
+	Math.max(...arr1) < Math.max(...arr2)){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+
+// Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
+
+function minMax(arr) {
+	return [Math.min(...arr), Math.max(...arr)];
+}
+
+// Create a function that takes a string and returns the word count. The string will be a sentence.
+
+function countWords(str) {
+	return str.split(' ').length;
+}
+
+
+// Create a function that takes an object and returns the keys and values as separate arrays.
+function keysAndValues(obj) {
+	return [Object.keys(obj),Object.values(obj)]
+}
+
+// Write a function that converts an object into an array, where each element represents a key-value pair.
+
+function toArray(obj) {
+	return Object.entries(obj)
+}
+
+// Given an array of numbers, negate all elements contained within.
+
+// Negating a positive value -+n will return -n, because all +'s are removed.
+// Negating a negative value --n will return n, because the first - turns the second minus into a +.
+
+function negate(arr) {
+	return arr.map(x => x * -1)
+}
+
+// Create a function that takes an array of students and returns an array of student names.
+
+// Examples
+// getStudentNames([
+//   { name: "Steve" },
+//   { name: "Mike" },
+//   { name: "John" }
+// ]) ➞ ["Becky", "John", "Steve"]
+
+function getStudentNames(students) {
+	return students.map( x => x.name)
+}
+
+// Create a function that takes a number (from 1 - 60) and returns a corresponding string of hyphens.
+
+// Examples
+// Go(1) ➞ "-"
+
+// Go(5) ➞ "-----"
+
+// Go(3) ➞ "---"
+
+function Go(num) {
+	return "-".repeat(num)
+}
 
