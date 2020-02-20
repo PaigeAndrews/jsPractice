@@ -307,3 +307,70 @@ function Go(num) {
 	return "-".repeat(num)
 }
 
+// even odd numbers
+
+for (var i = 0; i < 100; i++){
+		if(i==0){
+		continue;
+	}
+    // check that the number is even
+    if (i % 2 == 0){
+		 document.write(i + " is an even number.");
+         continue;
+    }
+    // if we got here, then i is odd.
+	document.write(i + " is an odd number.");
+}
+
+// Write a for loop that will iterate from 0 to 10. For each iteration of the for 
+// loop, it will multiply the number by 9 and log the result (e.g. "2 * 9 = 18").
+
+for (var i = 0; i < 10; i++){	
+	let result = i * 8;
+	document.write(`${i} * 8 = ${result} ,`)
+	}
+
+// Imagine a school that kids attend for 6 years. In each year, there are five groups 
+// started, marked with the letters a, b, c, d, e. For the first year, the groups are 1a, 
+// 1b, 1c, 1d, 1e and for the last year, the groups are 6a, 6b, 6c, 6d, 6e.
+
+// Write a function that returns the groups in the school by year (as a string), separated
+//  with a comma and a space in the form of "1a, 1b, 1c, 1d, 1e, 2a, 2b (....) 5d, 5e, 6a, 6b, 6c, 6d, 6e".
+
+function printAllGroups() {
+	let arr=  ["a", "b", "c", "d", "e"]
+	let arr2 = []
+	for (i=1; i<7; i++){
+		for(let letter of arr){
+			arr2.push(`${i}${letter}`)
+		}
+	} 
+	return arr2.join(", ")
+}
+
+// Create a function that reverses a boolean value and returns the string "boolean expected"
+//  if another variable type is given.
+
+function reverse(bool) {
+	if (bool === true){
+		return false
+	} else if(bool ===false){
+		return true
+	} else{
+		return "boolean expected"
+	}
+}
+
+// Create a function to multiply all of the values in an array by the amount of values in the given array.
+
+function multiplyByLength(arr) {
+	return arr.map(x => x * arr.length)
+}
+// or
+function multiplyByLength(arr) {
+	let multiply = arr.map(function(x)  {
+    return x * arr.length
+	})
+		return multiply
+}												 
+
