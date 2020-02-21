@@ -374,3 +374,45 @@ function multiplyByLength(arr) {
 		return multiply
 }												 
 
+// Create a function that concatenates n input arrays, where n is variable.
+
+// Examples
+// concat([1, 2, 3], [4, 5], [6, 7]) ➞ [1, 2, 3, 4, 5, 6, 7]
+
+// concat([1], [2], [3], [4], [5], [6], [7]) ➞ [1, 2, 3, 4, 5, 6, 7]
+
+// concat([1, 2], [3, 4]) ➞ [1, 2, 3, 4]
+
+// concat([4, 4, 4, 4, 4]) ➞ [4, 4, 4, 4, 4]
+
+function concat(...args) {
+	return (args).flat();
+}
+
+// Create a function that adds a string ending to each member in an array.
+
+// Examples
+// addEnding(["clever", "meek", "hurried", "nice"], "ly")
+// ➞ ["cleverly", "meekly", "hurriedly", "nicely"]
+
+// addEnding(["new", "pander", "scoop"], "er")
+// ➞ ["newer", "panderer", "scooper"]
+
+// addEnding(["bend", "sharpen", "mean"], "ing")
+// ➞ ["bending", "sharpening", "meaning"]
+
+function addEnding(arr, ending) {
+	return arr.map(x => x+ ending)
+}
+
+// Create a function that takes an array of strings and returns the words that are exactly four letters.
+
+function isFourLetters(arr) {
+	return arr.filter(x => x.length == 4)
+}
+
+// Create a function that takes an array of numbers and returns only the even values.
+
+function noOdds(arr) {
+	return arr.filter(x => x % 2 == 0)
+}
