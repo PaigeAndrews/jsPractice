@@ -447,3 +447,38 @@ function progressDays(runs) {
 	   return count
 	}
 
+	// Create a function that takes two numbers 
+	// and a mathematical operator + - / * and will perform a calculation with 
+	// the given numbers.
+	// If the input tries to divide by 0, return: "Can't divide by 0!"
+
+	function calculator(num1, operator, num2) {
+	
+		if(operator == '+') return num1+num2;
+		if(operator == '-') return num1-num2;
+		if(operator == '*') return num1*num2;
+		if(operator == '/' && num2 != 0) return num1/num2;
+		else return "Can't divide by 0!";
+	}
+
+// Given a total due and an array representing the amount of change in your pocket,
+// determine whether or not you are able to pay for the item. Change will always 
+// be represented in the following order: quarters, dimes, nickels, pennies.
+
+// To illustrate: changeEnough([25, 20, 5, 0], 4.25) should yield true, since having 
+// 25 quarters, 20 dimes, 5 nickels and 0 pennies gives you 6.25 + 2 + .25 + 0 = 8.50.
+
+function changeEnough(change, amountDue) {
+	let quarter = change[0]*0.25;
+	let dime = change[1]*0.10;
+	let nickle = change[2]*0.05;
+	let penny = change[3]*0.01;
+	
+		if( quarter+dime+nickle+penny >= amountDue ){
+			return true
+		}else{
+			return false
+		}
+	}
+
+	
