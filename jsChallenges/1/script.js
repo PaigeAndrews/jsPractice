@@ -494,4 +494,36 @@ function changeEnough(change, amountDue) {
 		let num2 = num.toString().split("").reverse()
 		return num2.map(x => Number(x))
 	}
-	
+
+	// Create a function that takes two numbers as arguments
+	//  (num, length) and returns an array of multiples of num up to length.
+
+	function arrayOfMultiples (num, length) {
+		let arr = []
+		for (i=1; i<length + 1; i++){
+			arr.push(num * i)
+		}
+		return arr
+	}
+
+// Return the sum of all items in an array, where each item is multiplied
+//  by its index (zero-based). For empty arrays, return 0.
+
+// Examples
+// indexMultiplier([1, 2, 3, 4, 5]) ➞ 40
+// // (1*0 + 2*1 + 3*2 + 4*3 + 5*4)
+
+// indexMultiplier([-3, 0, 8, -6]) ➞ -2
+// // (-3*0 + 0*1 + 8*2 + -6*3)
+
+function indexMultiplier(arr) {
+	let reducer = (a,b) => a+b;
+	for (i=0; i<arr.length; i++){
+		arr[i] = arr[i] * i
+	}
+	if( arr.length != 0){
+  return(arr.reduce(reducer))
+	}else{
+		return 0
+	}
+}
