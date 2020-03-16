@@ -540,3 +540,9 @@ function indexMultiplier(arr) {
 
 const removeLeadingTrailing = n =>
  parseFloat(n).toString();
+
+//  Write a function that converts an object into an array of keys and values.
+function objectToArray(obj) {
+	return Object.keys(obj).map(key => [key, obj[key]])
+}
+
