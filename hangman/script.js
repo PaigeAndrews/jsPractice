@@ -157,11 +157,12 @@ function replacingLetter(){
 
 function instructionsDisplay(){
 
-  winLose()
-
   if (usedLetters.includes(inputField.value)){
     instructions.innerHTML ="You already guessed \"" + inputField.value + "\"!";
-  } else if (randomWord.includes(inputField.value)){
+  }else if (inputField.value.length >=2){
+    instructions.innerHTML = "Can't guess two or more letters at once"
+  }
+  else if (randomWord.includes(inputField.value)){
     usedLetters.push(inputField.value)
     instructions.innerHTML = `You got one! <br> Youve used these letters: ${usedLetters} ${wrongLetters}`;
   } else if (randomWord.includes != inputField.value ){
@@ -170,6 +171,7 @@ function instructionsDisplay(){
     lives--
     
   }
+  winLose()
 }
    
 function winLose(){
@@ -178,28 +180,13 @@ function winLose(){
        inputField.style.display = "none"
        instructions.innerHTML = "You win! Congratulations!!"
     }else if(lives <= 0){
-      instructions.innerHTML = `Sorry, you lose! The word was ${randomWord}`
+      instructions.innerHTML = `Sorry, you lose! The word was ${randomWord.join('')}`
 
       inputField.style.display = "none"
     }  
     
     hangman.innerHTML = `Lives: ${lives}`
 }
-  
-
-
-// for (var i = 0; i < wrongLetters.length; i++) {
-      // if (randomWord === usedLetters) {
-      //   instructions.innerHTML = "You Win!";
-      // }
-    
-//  function blahBlah() {
-//     hangman.innerHTML = "You have " + lives + " lives";
-//     if (lives < 1) {
-//       instructions.innerHTML = "Game Over";
-//     }
-//   }
-  //  
 
 
 wordChooser(easyList, mediumList, hardList)
