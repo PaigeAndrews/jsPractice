@@ -5,13 +5,18 @@ body{
     overflow: scroll;
     overflow-x: hidden;
     margin: 0;
+    /* align-items: center; */
 }
-/* html{
-  height: 100%;
-  margin: auto;
-  width: auto;
-  overflow: scroll;
-} */
+
+p{
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.underscores{
+  font-size: 23px;
+}
+
 .hangman{
   font-size: 25px;
   padding-right:10%;
@@ -24,6 +29,7 @@ div{
     text-shadow: 1px 0 #1A5F85, 0 3px #1A5F85, 3px 0 #1A5F85, 0 1px #1A5F85;
     z-index: 1000;
     height: 520px;
+    height: auto;
   } 
 
   .instructions{
@@ -33,7 +39,8 @@ div{
     padding-right:10%;
   }
   .inputField{
-
+    height:30px;
+    font-size:20px;
   }
 
   .underscores{
@@ -48,20 +55,7 @@ div{
   .displayLettersUsed{
     font-size: 25px;
   }
-  /* h1,p, div{
-    color: white;
-    text-align: center;
-    font-size: 50px;
-    text-shadow: 1px 0 #1A5F85, 0 3px #1A5F85, 3px 0 #1A5F85, 0 1px #1A5F85;
-    z-index: 1000;
-  } 
-  h1,p, div{
-    color: white;
-    text-align: center;
-    font-size: 50px;
-    text-shadow: 1px 0 #1A5F85, 0 3px #1A5F85, 3px 0 #1A5F85, 0 1px #1A5F85;
-    z-index: 1000;
-  }  */
+ 
   .input{
     margin-left:42%;
     /* text-align: center; */
@@ -78,7 +72,7 @@ div{
   margin: 0;
   padding:0;
   /* display: inline; */
-  text-shadow:
+  /* text-shadow:
        4px 4px 1px #300000,
        4px 6px 1px #400000,
        4px 8px 1px #500000,
@@ -98,6 +92,12 @@ div{
        4px 36px 1px #FD0000,
        4px 38px 1px #FE0000,
        4px 40px 2px #FF0000;
+} */
+}
+
+.titleContainer{
+  width: 100%;
+  height: auto;
 }
 
 @keyframes slidein {

@@ -179,6 +179,7 @@ function winLose(){
     if(indexesOfMyWord.includes("_") != true){
        inputField.style.display = "none"
        instructions.innerHTML = "You win! Congratulations!!"
+       underscores.innerHTML = `${randomWord.join('')}`
     }else if(lives <= 0){
       instructions.innerHTML = `Sorry, you lose! The word was ${randomWord.join('')}`
 
