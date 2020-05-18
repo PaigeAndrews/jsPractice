@@ -5,6 +5,10 @@ body{
     overflow: scroll;
     overflow-x: hidden;
     margin: 0;
+    background: url('images/hallBg2.png') no-repeat center fixed;     
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
     /* align-items: center; */
 }
 
@@ -14,7 +18,12 @@ p{
 }
 
 .underscores{
-  font-size: 23px;
+  font-size: 35px;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  text-shadow: none;
+  /* font-size: 50px; */
+  padding-bottom:0;
 }
 
 .hangman{
@@ -43,14 +52,7 @@ div{
     font-size:20px;
   }
 
-  .underscores{
-    font-size: 25px;
-    font-family: 'Roboto Slab', serif;
-    text-shadow: none;
-    color: black;
-    font-size: 50px;
-    padding-bottom:0;
-  }
+  
 
   .displayLettersUsed{
     font-size: 25px;
@@ -71,28 +73,6 @@ div{
   animation-name: slidein;
   margin: 0;
   padding:0;
-  /* display: inline; */
-  /* text-shadow:
-       4px 4px 1px #300000,
-       4px 6px 1px #400000,
-       4px 8px 1px #500000,
-       4px 10px 1px #600000,
-       4px 12px 1px #700000,
-       4px 14px 1px #800000,
-       4px 16px 1px #900000,
-       4px 18px 1px #A00000,
-       4px 20px 1px #B00000,
-       4px 22px 1px #C00000,
-       4px 24px 1px #D00000,
-       4px 26px 1px #E00000,
-       4px 28px 1px #F00000,
-       4px 30px 1px #FA0000,
-       4px 32px 1px #FB0000,
-       4px 34px 1px #FC0000,
-       4px 36px 1px #FD0000,
-       4px 38px 1px #FE0000,
-       4px 40px 2px #FF0000;
-} */
 }
 
 .titleContainer{
@@ -112,7 +92,36 @@ div{
   }
 }
 
+@media (max-width: 290px){
+  div{
+    width: 100vw;
+    font-size: 40px;
+  }
+  .inputField{
+    width: 70%;
+    font-size:15px;
+  }
+}
 
+@media (min-width: 800px){
+  body{
+    background: url('images/hallBg.png') no-repeat center fixed; 
+  }
+  .hangman{
+    padding-right:17%;
+    padding-left: 17%;
+  }
+  .instructions{
+    text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
+  }
+}
+
+@media(min-width:1200px){
+  .hangman{
+    padding-left: 23%;
+    padding-right: 23%;
+  }
+}
 
 
 
