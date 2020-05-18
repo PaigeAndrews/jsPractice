@@ -10,25 +10,33 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Underdog&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
-  </head>  
+  </head>
+
   <body>
+    <div> 
+      <div class="titleContainer">
+        Halloween <p class = "spooky">Sp0000ky</p> Hangman<br><br>
+      </div>
+        <p class="hangman"> This is a hangman game. Guess one letter of the alphabet at a time to try and guess the secret word. You have 6 tries until you lose. Good luck!</p>
+        <p class="instructions">You have 6 Lives.<p>
+        <input type="text" class="inputField" placeholder="Enter a letter A - Z">
+        <p class="underscores"></p><br>
+        <p class="displaylettersUsed"></p>
+        <button id="playAgain">Play Again</button>
+    </div> 
 
- <div> 
-   <div class="titleContainer">
-    Halloween <p class = "spooky">Sp0000ky</p> Hangman<br><br>
-  </div>
-    <p class="hangman"> This is a hangman game. Guess one letter of the alphabet at a time to try and guess the secret word. You have 6 tries until you lose. Good luck!</p>
-    <p class="instructions">You have 6 Lives.<p>
-    <input type="text" class="inputField" placeholder="Enter a letter A - Z">
-    <p class="underscores"></p><br>
-    <p class="displaylettersUsed"></p>
-      
-  </div> 
-    <!-- <input type="text" class="input"><br> 
-    <!-- <form class="submit"><input type="submit"></form>
-    
+      <div id="modal">
+          <div class="modal-content">
+            <h6>Play Hangman on Easy, Medium, or Hard?</h6>
+            <ul>
+              <li id="easy">Easy</li>
+              <li id="medium">Medium</li>
+              <li id="hard">Hard</li>
+            </ul>
+          </div>
+      </div>
 
-  import the webpage's javascript file -->
- <script src="script.js" defer></script>
-    </body>
-    </html>
+        <!-- import the webpage's javascript file  -->
+        <script src="script.js" defer></script>
+  </body>
+</html>
