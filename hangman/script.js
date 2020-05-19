@@ -123,32 +123,21 @@ easyGame.addEventListener("click",function(){
   difficulty = "easy"
   modal.style.display = "none"
   wordChooser(easyList, mediumList, hardList)
-  // console.log("easy")
 })
 
 mediumGame.addEventListener("click",function(){
   difficulty = "medium"
   modal.style.display = "none"
   wordChooser(easyList, mediumList, hardList)
-  // console.log("medium")
 })
 
 hardGame.addEventListener("click",function(){
   difficulty = "hard"
   modal.style.display = "none"
   wordChooser(easyList, mediumList, hardList)
-  // console.log("hard")
 })
 
 function wordChooser(easyList, mediumList, hardList){
-  // modal.style.display = "block"
-
-  // difficulty = prompt("Easy, Medium, or Hard").toLowerCase()
-  
-  // while(difficulty != "easy" && difficulty != "medium" && difficulty != "hard"){
-  //   difficulty = prompt("Your choice must be Easy, Medium, or Hard").toLowerCase()
-  // }
-  console.log(difficulty)
   if(difficulty == "easy"){
     randomWord = easyList[Math.floor(Math.random() * easyList.length)]
   } else if (difficulty == "medium") {
@@ -162,7 +151,6 @@ function wordChooser(easyList, mediumList, hardList){
 
 
 function activeWordFunction(){
-  
   for(n=0; n < randomWord.length; n++) {
     indexesOfMyWord.push("_")
   } 
@@ -172,7 +160,7 @@ function activeWordFunction(){
 function replacingLetter(){
   for(i=0; i <= randomWord.length - 1; i++){
     if(randomWord[i] == inputField.value.toLowerCase()){
-      indexesOfMyWord[i] = inputField.value
+      indexesOfMyWord[i] = inputField.value.toLowerCase()
     }
   }
   underscores.innerHTML = indexesOfMyWord
@@ -180,16 +168,19 @@ function replacingLetter(){
 }
 
 function instructionsDisplay(){
-  if (usedLetters.includes(inputField.value)){
+  console.log(randomWord)
+  if (usedLetters.includes(inputField.value.toLowerCase())){
     instructions.innerHTML ="You already guessed \"" + inputField.value + "\"!";
   }else if (inputField.value.length >=2){
     instructions.innerHTML = "Can't guess two or more letters at once"
-  }
-  else if (randomWord.includes(inputField.value)){
-    usedLetters.push(inputField.value)
+  }else if (randomWord.includes(inputField.value.toLowerCase())){
+    usedLetters.push(inputField.value.toLowerCase())
     instructions.innerHTML = `You got one! <br> Youve used these letters: ${usedLetters} ${wrongLetters}`;
-  } else if (randomWord.includes != inputField.value ){
-    wrongLetters.push(inputField.value)
+  } else if (!inputField.value.match(/^[A-Za-z]+$/) ){
+    console.log(inputField.value)
+    instructions.innerHTML = "Please guess only letters"
+  }else if (randomWord.includes != inputField.value.toLowerCase() ){
+    wrongLetters.push(inputField.value.toLowerCase())
     instructions.innerHTML = `Oops! This letter is not in the word <br> Guess another letter! <br> Youve used these letters: ${usedLetters} ${wrongLetters}`
     lives--
   }
@@ -211,7 +202,6 @@ function winLose(){
 }
 
 
-
 inputField.addEventListener("keydown",function(event){
   if(event.which == "13"){
     replacingLetter()
@@ -224,10 +214,6 @@ playAgain.addEventListener("click",function(){
     return false;
 })
 
-
-
-
-console.log("underscores", indexesOfMyWord, "random word", randomWord)
 
 
 

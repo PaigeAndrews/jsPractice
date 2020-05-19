@@ -21,7 +21,6 @@ p{
   color: white;
   font-family: 'Roboto Slab', serif;
   text-shadow: none;
-  /* font-size: 50px; */
   padding-bottom:0;
 }
 
@@ -30,6 +29,7 @@ p{
   padding-right:10%;
   padding-left: 10%;
 }
+
 div{
     color: white;
     text-align: center;
@@ -38,36 +38,35 @@ div{
     z-index: 1000;
     height: 520px;
     height: auto;
-  } 
+} 
 
-  .instructions{
-    font-size: 25px;
-    text-shadow: 1px 0 #1A5F85, 0 2px #1A5F85, 2px 0 #1A5F85, 0 1px #1A5F85;
-    padding-left:10%;
-    padding-right:10%;
-  }
-  .inputField{
-    height:30px;
-    font-size:20px;
-  }
+.instructions{
+  font-size: 25px;
+  text-shadow: 1px 0 #1A5F85, 0 2px #1A5F85, 2px 0 #1A5F85, 0 1px #1A5F85;
+  padding-left:10%;
+  padding-right:10%;
+}
 
-  
+.inputField{
+  height:30px;
+  font-size:20px;
+}
 
-  .displayLettersUsed{
-    font-size: 25px;
-  }
- 
-  .input{
-    margin-left:42%;
-    /* text-align: center; */
-   
-  }
-  .submit{
-    text-align: center;
-    font-size: 20px;
-  }
+.displayLettersUsed{
+  font-size: 25px;
+}
+
+.input{
+  margin-left:42%;
+}
+
+.submit{
+  text-align: center;
+  font-size: 20px;
+}
+
 .spooky {
-    color:red;
+  color:red;
   animation-duration: 1s;
   animation-name: slidein;
   margin: 0;
@@ -80,15 +79,29 @@ div{
 }
 
 #playAgain{
-  display: none;
+  display: none; 
+  font-size: 2rem;
+  background-color: red;
+  padding:9px;
+  border: 3px solid #1A5F85;
+  color: white;
+  margin-bottom: 2%;
+}
+
+h6{
+  font-size: 2rem;
+}
+
+ul{
+  padding: 0;
 }
 
 li{
   list-style: none;
+  font-size: 2.5rem;
 }
 
 #modal {
-  /* display: block;  */
   position: fixed; 
   z-index: 2000; 
   padding-top: 5vh; 
@@ -100,14 +113,15 @@ li{
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
+
 .modal-content {
-  background: rgb(202,210,16);
-  background: radial-gradient(circle, rgba(202,210,16,1) 0%, rgba(224,101,12,1) 100%);
+  background: rgb(238,255,22);
+  background: radial-gradient(circle, rgba(238,255,22,0.8323704481792717) 0%, rgba(236,145,47,0.8743872549019608) 81%);
   border-radius: 7px;
   margin: auto;
   padding: 20px;
   border: 1px solid #000;
-  width: 70%;
+  width: 60%;
 }
 
 #easy:hover, #medium:hover, #hard:hover {
@@ -151,10 +165,13 @@ li{
   .underscores{
     text-shadow: 1px 0 #1A5F85, 0 3px #1A5F85, 3px 0 #1A5F85, 0 1px #1A5F85;
   }
+  #playAgain:hover{
+    background-color: rgb(148, 1, 1);
+  }
  
   * {
     animation-delay: -99s;
-}
+  }
 }
 
 @media(min-width:1200px){
