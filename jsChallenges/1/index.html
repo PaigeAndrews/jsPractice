@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Hello!</title>
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- import the webpage's javascript file -->
-    <script src="script.js" defer></script>
-  </head>  
-  <body>
-    
-  </body>
+    <title>Clicker</title>
+    <meta name="description" content="">
+    <style></style>
+</head>
+<body>
+    <button>Click!</button>
+
+<script>
+    const counter = {
+        cnt: 0,
+
+        inc: function() {
+            this.cnt++;
+            console.log(this.cnt);
+        }
+    };
+
+    const button = document.getElementsByTagName('button')[0];
+    button.addEventListener('click', counter.inc.bind(counter), false);
+
+</script>
+</body>
 </html>
+
+<!-- Above code is code test for fixing non working code -->

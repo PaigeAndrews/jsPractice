@@ -552,6 +552,11 @@ function objectToArray(obj) {
 function reverseAndNot(i) {
 	return parseInt(i.toString().split('').reverse().join('')+i);
   };
+  //  Write a function that converts an object into an array of keys and values.
+function objectToArray(obj) {
+	return Object.keys(obj).map(key => [key, obj[key]])
+}
+
 
 
 //   Create a function that takes in an array (slot machine outcome) and returns true if all elements 
@@ -561,5 +566,4 @@ function testJackpot(result) {
 	const equalsSame = (currentValue) => currentValue == result[0];
 		return(result.every(equalsSame));
 }
-
 
