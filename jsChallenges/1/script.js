@@ -567,3 +567,11 @@ function testJackpot(result) {
 		return(result.every(equalsSame));
 }
 
+
+// Capitalize each of an array of names
+function capitalizeNames(arr){
+  return arr.map( word => word[0].toUpperCase() + word.slice(1, word.length).toLowerCase())
+}
+
+
+console.log(capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"])); // ["John", "Jacob", "Jingleheimer", "Schmidt"]
