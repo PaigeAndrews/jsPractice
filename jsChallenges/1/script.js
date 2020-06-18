@@ -575,3 +575,17 @@ function capitalizeNames(arr){
 
 
 console.log(capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"])); // ["John", "Jacob", "Jingleheimer", "Schmidt"]
+
+// Create a function which returns the number of true values there are in an array.
+function countTrue(arr) {
+	let count = 0;
+	if(arr.length == 0){
+		return 0
+	}
+	for(let index of arr){
+		if (index == true){
+		 count++
+		}
+	}
+	return count
+}
