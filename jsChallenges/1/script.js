@@ -594,3 +594,15 @@ function countTrue(arr) {
 function toArray(obj) {
 	return Object.entries(obj);
 }
+
+// Return the sum of all items in an array, where each item is multiplied by its index (zero-based). For empty arrays, return 0.
+function indexMultiplier(arr) {
+	let result = 0
+	if (arr.length == 0){
+		return 0
+	}
+	for (let i=0; i<arr.length; i++){
+		result += i * arr[i]
+	} 
+	return result
+}
