@@ -606,3 +606,12 @@ function indexMultiplier(arr) {
 	} 
 	return result
 }
+
+// Create the function that takes an array with objects and returns the sum of people's budgets.
+function getBudgets(arr) {
+	let result = 0;
+	for(let element of arr){
+		result += element.budget
+	}
+	return result
+}
