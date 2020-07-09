@@ -633,3 +633,14 @@ function clone(arr) {
 	arr.push(arr2)
 	return arr
 }
+
+// Create a function that concatenates n input arrays, where n is variable.
+
+// Examples
+// concat([1, 2, 3], [4, 5], [6, 7]) ➞ [1, 2, 3, 4, 5, 6, 7]
+
+// concat([1], [2], [3], [4], [5], [6], [7]) ➞ [1, 2, 3, 4, 5, 6, 7]
+
+function concat(...args) {
+	return [].concat(...args)
+}
