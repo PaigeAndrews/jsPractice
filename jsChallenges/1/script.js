@@ -644,3 +644,15 @@ function clone(arr) {
 function concat(...args) {
 	return [].concat(...args)
 }
+
+// Create a function that takes an object and returns the keys and values as separate arrays
+function keysAndValues(obj) {
+	var k = [];
+	var o = [];
+	for (var i in obj){
+	  k.push(i);
+	  o.push(obj[i]);
+	}
+	return [k,o];
+  }
+
